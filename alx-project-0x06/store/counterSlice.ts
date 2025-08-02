@@ -1,22 +1,23 @@
+// store/counterSlice.ts
 import { createSlice } from "@reduxjs/toolkit";
 
 interface CounterState {
-  count: number;
+  value: number;
 }
 
 const initialState: CounterState = {
-  count: 0,
+  value: 0,
 };
 
 const counterSlice = createSlice({
-  name: "counter",
+  name: "counter", // ✅ Fix this name
   initialState,
   reducers: {
     increment: (state) => {
-      state.count += 1;
+      state.value += 1;
     },
     decrement: (state) => {
-      if (state.count > 0) state.count -= 1;
+      if (state.value > 0) state.value -= 1;
     },
   },
 });

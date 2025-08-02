@@ -6,7 +6,7 @@ import { RootState } from "@/store/store";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
- const count = useSelector((state: RootState) => state.counter.count);
+ const count = useSelector((state: RootState) => state.counter.value);
 
 
     return (
